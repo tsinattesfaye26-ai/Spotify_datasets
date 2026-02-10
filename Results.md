@@ -1,4 +1,4 @@
-<img width="289" height="261" alt="image" src="https://github.com/user-attachments/assets/f76898cb-3e46-4b01-bca1-0d5412f8e80c" /># : Market Performance (The "Business" Questions)
+# : Market Performance (The "Business" Questions)
 ### 1 The "Power Players": Which top 10 artists have the highest average popularity, but only for artists with more than 5 songs? (This filters out "one-hit wonders")
 artist_name|	average_popularity |	song_count
 |-----------|--------------------|----------|
@@ -80,7 +80,7 @@ Indie	| 1258001000
 - Classical ranks high despite being traditionally niche
 - Rock, Jazz, and Country show slightly lower totals
 
-### 3 Genre Dominance: Calculate the total streams per genre for each year. Which genre has seen the most growth between 2023 and 2024?
+### 3 Genre Dominance: Calculate the total streams per genre for each year. Which genre has seen the most growth between 2024 and 2025?
 | Genre     | Total Streams 2024 | Total Streams 2025 | Growth % (24→25) |
 |-----------|--------------------|--------------------|------------------|
 | Folk      | 75438000           | 184282000          | 144.28           |
@@ -102,19 +102,107 @@ Indie	| 1258001000
 - EDM (+15%) and Classical (+5%) show steady positive growth
 - Country (+0.68%) shows almost no change
 - Pop (-40%), R&B (-34%), Metal (-30%), Jazz (-60%) show sharp drops
-
-### 4 The "Longevity" Test: Identify songs that were released over 5 years ago but still maintain a popularity score above 80
-
-### 5 Market Share: What percentage of the total streams in the entire dataset does the top 1% of artists control?
+### 3.1 pop 
+| Release Year | Song Count | Avg Popularity | Total Streams |
+|--------------|------------|----------------|---------------|
+| 2015         | 690        | 48.4899        | 183673000     |
+| 2016         | 619        | 48.6511        | 148643000     |
+| 2017         | 670        | 47.491         | 134617000     |
+| 2018         | 657        | 48.2542        | 109041000     |
+| 2019         | 664        | 47.5964        | 100254000     |
+| 2020         | 603        | 49.4295        | 170468000     |
+| 2021         | 652        | 48.1595        | 130942000     |
+| 2022         | 635        | 49.3402        | 188724000     |
+| 2023         | 649        | 47.641         | 136019000     |
+| 2024         | 649        | 49.0693        | 147817000     |
+| 2025         | 608        | 48.0461        | 87953000      |
+**insight** 
+- 2022 has the highest total streams (~188M)
+- 2015 and 2020 also show strong performance
+- Average popularity stays relatively stable (~47–49)
+- Years with high song counts do not always produce higher streams
+### 3.2 Hip hop 
+| Release Year | Song Count | Avg Popularity | Total Streams |
+|--------------|------------|----------------|---------------|
+| 2015         | 640        | 48.6359        | 157859000     |
+| 2016         | 668        | 48.3009        | 199806000     |
+| 2017         | 659        | 48.3885        | 161789000     |
+| 2018         | 638        | 48.732         | 176552000     |
+| 2019         | 651        | 47.3871        | 150101000     |
+| 2020         | 666        | 48.1697        | 182980000     |
+| 2021         | 645        | 49.414         | 139905000     |
+| 2022         | 640        | 47.9813        | 104681000     |
+| 2023         | 649        | 48.2404        | 186562000     |
+| 2024         | 640        | 48.9453        | 204753000     |
+| 2025         | 664        | 47.7786        | 241774000     |
+**insight** 
+- Streaming reaches peak levels in 2025 (241M)
+- Lowest total streams (~104M)
+- Average popularity stays around 47–49 across all years
+  
  # : Audio Engineering & Trends (The "Product" Questions)
-### 6 The "Energy" Shift: Is there a measurable trend of songs getting shorter (duration_ms) and more energetic (energy) over the last 10 years?
-### 7 Danceability vs. Success: Do songs with a high danceability ( > 0.7) actually get more streams than "moody" songs with low danceability?
-### 8 The "Loudness" Sweet Spot: What is the average loudness for the top 100 most streamed songs versus the bottom 100?
-### 9 Tempo & Genre: For each genre, what is the "average tempo"? Does a specific tempo (e.g., 120 BPM) correlate with higher popularity?
-### 10 Acoustic vs. Electronic: Calculate the ratio of acousticness to instrumentalness over the years. Are we moving toward more "organic" sounds?
+### 4 The "Loudness" Sweet Spot: What is the average loudness for the top 100 most streamed songs versus the bottom 100?
+
+| Release Year | Avg Duration (ms) | Avg Energy Score | Duration % Change | Energy % Change |
+|--------------|-------------------|------------------|-------------------|-----------------|
+| 2025         | 253623            | 0.5062           | 0.51              | 0.6             |
+| 2024         | 252325            | 0.5032           | -0.83             | -0.59           |
+| 2023         | 254426            | 0.5062           | -0.07             | -0.5            |
+| 2022         | 254615            | 0.5087           | -0.47             | 0.77            |
+| 2021         | 255812            | 0.5048           | 0.03              | 0.5             |
+| 2020         | 255724            | 0.5023           | 0.51              | -0.46           |
+| 2019         | 254432            | 0.5046           | -0.83             | -0.28           |
+| 2018         | 256549            | 0.506            | -0.06             | 0.42            |
+| 2017         | 256694            | 0.5039           | 0.6               | 0.17            |
+| 2016         | 255169            | 0.5031           | NULL              | NULL            |
+
+
+**insight** 
+- Average duration trends downward from ~256k ms (2017–2018) to ~253k ms (2025)
+- Avg energy score stays around 0.50–0.51 across all years
+- Duration % change stays within ±1%
+- Highest energy score (0.5087)
+### 5 Tempo & Genre: For each genre, what is the "average tempo"? Does a specific tempo (e.g., 120 BPM) correlate with higher popularity?
+avg_loudness_top_100 |	avg_loudness_bottom_100	| loudness_diff_db |
+|--------------------|-------------------------|-------------------|
+-28.5788	| -27.1994 |	-1.38
+
+### 6  Acoustic vs. Electronic: Calculate the ratio of acousticness to instrumentalness over the years. Are we moving toward more "organic" sounds?
+| Genre     | Avg Tempo | Avg Popularity | Sweet Spot BPM |
+|-----------|-----------|----------------|----------------|
+| Pop       | 130.76    | 48.37          | 160            |
+| Classical | 129.34    | 48.36          | 88             |
+| Hip-Hop   | 130.27    | 48.36          | 157            |
+| R&B       | 130.25    | 48.36          | 121            |
+| EDM       | 129.17    | 48.2           | 121            |
+| Metal     | 129.63    | 48.19          | 146            |
+| Country   | 130.74    | 48.17          | 200            |
+| Indie     | 130.09    | 48.12          | 191            |
+| Folk      | 130.15    | 48.1           | 155            |
+| Rock      | 129.52    | 47.97          | 108            |
+| Reggaeton | 130.05    | 47.88          | 116            |
+| Jazz      | 129.42    | 47.85          | 72             |
+**insight** 
+- Average tempo is highly clustered around ~129–131 BPM
+- Avg popularity scores are very close (~47.8–48.3)
+- Despite similar average tempo, optimal BPM differs by genre
+
 # : Advanced Data Cleaning & Logic (The "Technical" Questions)
-### 11 Identifying Outliers: Find any songs where the popularity is high ( > 90) but the energy and valence (happiness) are extremely low. (The "Sad Girl Autumn" effect).
-### 12 Explicit Content ROI: Do explicit songs generate more streams on average than clean songs within the "Hip-Hop" and "Pop" genres?
-### 13  Data Integrity Check: Identify "Duplicate" tracks (same name and artist) and determine if their stream counts should be merged.
-### 14 Seasonality of Releases: In which month are the "most popular" songs typically released? (e.g., Are summer hits actually released in May?).
-### 15 The "Feature" Effect: Find artists who appear in track_name (e.g., "Artist A feat. Artist B") and see if collaborations perform better than solo tracks.
+### 7 Identifying Outliers: Find any songs where the popularity is high ( > 90) but the energy and valence (happiness) are extremely low. (The "Sad Girl Autumn" effect)
+| Release Year | Avg Explicit Score | Avg Instrumentalness | Explicit-to-Instrumental Ratio | Sound Trend                     |
+|--------------|--------------------|----------------------|--------------------------------|----------------------------------|
+| 2025         | 0.1988             | 0.3964               | 0.5                            | Increasing Synthetic/Instrumental |
+| 2024         | 0.2028             | 0.4012               | 0.51                           | Increasing Organic/Raw           |
+| 2023         | 0.1905             | 0.401                | 0.48                           | Increasing Synthetic/Instrumental |
+| 2022         | 0.2038             | 0.3998               | 0.51                           | Increasing Synthetic/Instrumental |
+| 2021         | 0.2073             | 0.401                | 0.52                           | Increasing Organic/Raw           |
+| 2020         | 0.2014             | 0.4054               | 0.5                            | Increasing Organic/Raw           |
+| 2019         | 0.1997             | 0.3982               | 0.5                            | Increasing Synthetic/Instrumental |
+| 2018         | 0.2001             | 0.398                | 0.5                            | Increasing Synthetic/Instrumental |
+| 2017         | 0.206              | 0.4021               | 0.51                           | Increasing Organic/Raw           |
+| 2016         | 0.2011             | 0.3983               | 0.5                            | Increasing Synthetic/Instrumental |
+| 2015         | 0.2034             | 0.3963               | 0.51                           | Increasing Synthetic/Instrumental |
+**insight** 
+- Avg explicit score remains around 0.19–0.21 across all years
+- Avg instrumentalness (~0.39–0.40) is almost double explicit score
+- Ratio stays close to 0.5, showing stable balance between vocal-heavy and instrumental sound profiles.
