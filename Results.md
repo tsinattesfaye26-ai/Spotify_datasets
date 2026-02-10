@@ -1,4 +1,4 @@
-# : Market Performance (The "Business" Questions)
+<img width="289" height="261" alt="image" src="https://github.com/user-attachments/assets/f76898cb-3e46-4b01-bca1-0d5412f8e80c" /># : Market Performance (The "Business" Questions)
 ### 1 The "Power Players": Which top 10 artists have the highest average popularity, but only for artists with more than 5 songs? (This filters out "one-hit wonders")
 artist_name|	average_popularity |	song_count
 |-----------|--------------------|----------|
@@ -60,8 +60,6 @@ Medical Republican	Lindsay Gomez	|8/17/2020	|86
 Chair quite	Daniel Mckay	| 2/5/2020	| 86
 Consider Democrat third peace	Stacy Lopez	|8/8/2020	|86
 
-### 2.3 track_name	artist_name	release_date	popularity
-
 genre	| total_genre_streams
 |------|------------------|
 Hip-Hop	| 1906762000
@@ -76,9 +74,37 @@ Jazz	| 1447452000
 Country |	1440493000
 Reggaeton	| 1316019000
 Indie	| 1258001000
+**insight** 
+- Hip-Hop has the highest total streams (~1.9B)
+- R&B, Metal, Classical, Folk, Pop, and EDM are very close in total streams
+- Classical ranks high despite being traditionally niche
+- Rock, Jazz, and Country show slightly lower totals
 
 ### 3 Genre Dominance: Calculate the total streams per genre for each year. Which genre has seen the most growth between 2023 and 2024?
-### 4 The "Longevity" Test: Identify songs that were released over 5 years ago but still maintain a popularity score above 80.
+| Genre     | Total Streams 2024 | Total Streams 2025 | Growth % (24→25) |
+|-----------|--------------------|--------------------|------------------|
+| Folk      | 75438000           | 184282000          | 144.28           |
+| Indie     | 74828000           | 158806000          | 112.23           |
+| Hip-Hop   | 204753000          | 241774000          | 18.08            |
+| EDM       | 127463000          | 147396000          | 15.64            |
+| Classical | 160740000          | 169167000          | 5.24             |
+| Country   | 173657000          | 174842000          | 0.68             |
+| Rock      | 120781000          | 119015000          | -1.46            |
+| Reggaeton | 142554000          | 117128000          | -17.84           |
+| Metal     | 197147000          | 136808000          | -30.61           |
+| R&B       | 151931000          | 100050000          | -34.15           |
+| Pop       | 147817000          | 87953000           | -40.5            |
+| Jazz      | 144704000          | 56546000           | -60.92           |
+
+**insight** 
+- Folk (+144%) and Indie (+112%) show massive growth
+- Hip-Hop still grows (+18%) despite already high streaming numbers
+- EDM (+15%) and Classical (+5%) show steady positive growth
+- Country (+0.68%) shows almost no change
+- Pop (-40%), R&B (-34%), Metal (-30%), Jazz (-60%) show sharp drops
+
+### 4 The "Longevity" Test: Identify songs that were released over 5 years ago but still maintain a popularity score above 80
+
 ### 5 Market Share: What percentage of the total streams in the entire dataset does the top 1% of artists control?
  # : Audio Engineering & Trends (The "Product" Questions)
 ### 6 The "Energy" Shift: Is there a measurable trend of songs getting shorter (duration_ms) and more energetic (energy) over the last 10 years?
