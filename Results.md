@@ -1,6 +1,82 @@
 # : Market Performance (The "Business" Questions)
-### 1 The "Power Players": Which top 10 artists have the highest average popularity, but only for artists with more than 5 songs? (This filters out "one-hit wonders").
-### 2 Streaming Efficiency: Which songs have the highest popularity despite having a low stream_count? (This identifies "viral" or "trending" tracks that are rising fast).
+### 1 The "Power Players": Which top 10 artists have the highest average popularity, but only for artists with more than 5 songs? (This filters out "one-hit wonders")
+artist_name|	average_popularity |	song_count
+|-----------|--------------------|----------|
+Stephanie Lee |	70.6667 |	6
+Amanda Henry	| 65.6667	|6
+Steven Miller |	64.625	|8
+Jennifer Jackson	|63.4444	|9
+Justin Miller	| 62.875	|8
+Steven Jackson	|62.8571	|7
+Michael Lee|	62.4444	| 9
+Emily Wilson	|62.3333|	6
+Jacob Smith	| 61.5	|6
+Mary Russell	| 61.1429	| 7
+
+
+### 2 Streaming Efficiency: Which songs have the highest popularity despite having a low stream_count? (This identifies "viral" or "trending" tracks that are rising fast)
+
+track_name	artist_name |	popularity	stream_count |	efficiency_ratio |
+|----------------------|--------------------------|-----------------|
+Offer bill	Elaine Donovan	| 100	103000	| 970.8738
+Them language power	Curtis Salazar	| 90	100000	| 900
+Theory	Brandi Perkins|	98	110000	| 890.9091
+Amount chance	Aaron Larson	| 89	101000	| 881.1881
+Itself hundred	April Garcia	| 89	103000	| 864.0777
+Choose gun year policy	Amanda Holmes	| 89	103000	| 864.0777
+Reveal close news suggest write	Natasha Leon	| 100	116000	| 862.069
+So sometimes soon morning far	Kimberly Kelley	|91	107000	| 850.4673
+Key stage knowledge successful	William Valenzuela	| 85	100000	| 850
+Like machine cost	Carlos Walters Jr.	| 87	103000	| 844.6602
+
+### 2.1  The "Rising Stars" (High Popularity + Lower Streams)
+
+track_name	artist_name |	popularity	| stream_count
+|----------------------|------------|--------------|
+Offer bill	Elaine Donovan	| 100	| 103000
+Certainly in such	Patricia Le	| 100| 503000
+Admit paper	Tracy Shelton|	100	|574000
+Daughter speak	Gregory Reyes|	100	|980000
+Should war	Laura Obrien	|100	|619000
+Tree notice growth industry three	Christina Munoz	|100	|283000
+Land discuss	Henry Jimenez	|100	|94000
+Approach tonight	Greg Thompson	|100	|920000
+During Mr	Francis King	|100	|600000
+Common carry	Anna Campbell	|100	 |934000
+
+
+### 2.2 The "Reliable Classics" (Old Songs + High Popularity)
+
+track_name	artist_name |	release_date	|popularity
+|----------------------|--------------|---------|
+Build for	Samantha Snow |	6/30/2020	| 86
+Car	Miranda Wilson |	10/25/2020	| 86
+Drug next	Joseph Jimenez|	4/30/2020|	86
+Either everyone lot various	Joseph Sawyer	| 8/2/2020	|86
+Technology north meeting bed	John Brady |	1/22/2020	|86
+Bar answer great	Angela Nash	|7/30/2020	|86
+Their imagine	Lucas Williams |	2/23/2020	|86
+Medical Republican	Lindsay Gomez	|8/17/2020	|86
+Chair quite	Daniel Mckay	| 2/5/2020	| 86
+Consider Democrat third peace	Stacy Lopez	|8/8/2020	|86
+
+### 2.3 track_name	artist_name	release_date	popularity
+
+genre	| total_genre_streams
+|------|------------------|
+Hip-Hop	| 1906762000
+R&B	| 1625619000
+Metal	| 1604998000
+Classical| 	1558461000
+Folk	| 1539041000
+Pop	| 1538151000
+EDM	| 1533096000
+Rock	| 1452055000
+Jazz	| 1447452000
+Country |	1440493000
+Reggaeton	| 1316019000
+Indie	| 1258001000
+
 ### 3 Genre Dominance: Calculate the total streams per genre for each year. Which genre has seen the most growth between 2023 and 2024?
 ### 4 The "Longevity" Test: Identify songs that were released over 5 years ago but still maintain a popularity score above 80.
 ### 5 Market Share: What percentage of the total streams in the entire dataset does the top 1% of artists control?
